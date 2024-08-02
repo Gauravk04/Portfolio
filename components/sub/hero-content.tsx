@@ -15,13 +15,13 @@ const descriptions = [
   "I'm an Aspiring Full Stack Developer",
   "I'm into programming",
   "I'm into projects",
-  "I'm into multimedia"
+  "I'm into multimedia",
 ];
 
 const letterAnimation = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 }
+  exit: { opacity: 0, y: -20 },
 };
 
 export const HeroContent = () => {
@@ -35,8 +35,9 @@ export const HeroContent = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const linkedInProfile = "https://www.linkedin.com/in/gaurav-k04/"; 
-  const cv = "https://drive.google.com/file/d/1io6_UoPj7uUWuqD5O0dNF9Gfx32zg1Nl/view?usp=sharing"
+  const linkedInProfile = "https://www.linkedin.com/in/gaurav-k04/";
+  const cv =
+    "https://drive.google.com/file/d/1io6_UoPj7uUWuqD5O0dNF9Gfx32zg1Nl/view?usp=sharing";
   return (
     <motion.div
       initial="hidden"
@@ -50,7 +51,7 @@ export const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[5px] h-4 w-4" />
           <h1 className="Welcome-text text-[12px] md:text-[16px] lg:text-[20px]">
-            Welcome to Gaurav's world
+            Welcome to Gaurav&apos;s world
           </h1>
         </motion.div>
 
@@ -61,7 +62,7 @@ export const HeroContent = () => {
           <span>
             Hi there !! <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              I'm Gaurav
+              I&apos;m Gaurav
             </span>
           </span>
         </motion.div>
@@ -88,12 +89,12 @@ export const HeroContent = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact me + 
+            Contact me +
           </motion.a>
           <motion.a
             variants={slideInFromLeft(1)}
             className="py-2 px-4 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px] bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600"
-            href={cv}  
+            href={cv}
             target="_blank"
             rel="noopener noreferrer"
           >

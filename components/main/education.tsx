@@ -26,7 +26,7 @@ const Education = () => {
           <div className="col-xl-4 col-lg-4 col-md-6">
             <div className="single-pricing">
               <h3>Class X ( ICSE )</h3>
-              <h4>St. Joseph's School</h4>
+              <h4>St. Joseph&apos;s School</h4>
               <p>PCMB-CS</p>
               <ul>
                 <li>
