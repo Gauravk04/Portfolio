@@ -36,16 +36,16 @@ export const About = () => {
             Passionate about problem solving and programming.
           </div>
           <p className="text-[18px] mb-4">
-            I'm a <b className="text-red-300">CSE&apos;25</b> student at{" "}
-            <b className="text-red-300">Lovely Professional University</b>. I'm
-            on a journey to become a Software Development Engineer, backed by a
-            strong foundation in computer science and engineering. I excel in
-            quickly learning and applying new technologies to real-world
-            projects. I'm eager to seize opportunities where I can leverage my
-            skills to make a positive impact on the world. Outside of coding, I
-            have a keen interest in Competitive Programming and enjoy tackling
-            programming puzzles in my free time. Let&apos;s code and create
-            something amazing together!
+            I&apos;m a <b className="text-red-300">CSE&apos;25</b> student at{" "}
+            <b className="text-red-300">Lovely Professional University</b>.
+            I&apos;m on a journey to become a Software Development Engineer,
+            backed by a strong foundation in computer science and engineering. I
+            excel in quickly learning and applying new technologies to
+            real-world projects. I&apos;m eager to seize opportunities where I
+            can leverage my skills to make a positive impact on the world.
+            Outside of coding, I have a keen interest in Competitive Programming
+            and enjoy tackling programming puzzles in my free time. Let&apos;s
+            code and create something amazing together!
             <span className="rocket-animation">🚀</span>
           </p>
           <ul>
