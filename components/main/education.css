@@ -1,0 +1,107 @@
+.education-section {
+    padding: 4rem 0;
+    background-color: transparent;
+    color: #eaeaea;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: #ff00ff;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .col-xl-4,
+  .col-lg-4,
+  .col-md-6 {
+    flex: 1 1 30%;
+    max-width: 30%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .single-pricing {
+    background-color: rgb(206, 206, 206,0.1); /* Increased transparency */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure same height */
+  }
+  
+  .single-pricing h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .single-pricing h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .single-pricing ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  
+  .single-pricing ul li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .single-pricing ul li i {
+    margin-right: 0.5rem;
+  }
+  
+  .single-pricing img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .single-pricing a {
+    display: inline-block;
+    background-color: transparent; /* Set background to transparent */
+    color: #00ff00; /* Set text color to green */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    border: 1px solid #00ff00; /* Optional: Add a border for visibility */
+  }
+  
+  .single-pricing a:hover {
+    background-color: rgba(0, 255, 0, 0.2); /* Optional: Add hover effect */
+  }
+  
+  .single-pricing a i {
+    margin-left: 0.5rem;
+  }
+  
