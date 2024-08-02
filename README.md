@@ -51,7 +51,8 @@ space-portfolio/
 
 ## :camera: Screenshots:
 
-![project-3](https://github.com/user-attachments/assets/62b6032e-694b-4850-a771-225e9c26aead)
+![Screenshot (83)](https://github.com/user-attachments/assets/f3276866-fffb-4280-9768-db6f32877540)
+
 
 
 ## :gear: Tech Stack
