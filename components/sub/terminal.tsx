@@ -14,7 +14,7 @@ export const Terminal = () => {
       cmd: "system_init",
       output: (
         <span className="text-cyan-400">
-          Welcome to Gaurav&apos;s Terminal! Type <span className="text-purple-400 font-bold">'help'</span> to see available commands.
+          Welcome to Gaurav&apos;s Terminal! Type <span className="text-purple-400 font-bold">&apos;help&apos;</span> to see available commands.
         </span>
       ),
     },
@@ -78,7 +78,7 @@ export const Terminal = () => {
         setInput("");
         return;
       default:
-        output = <span className="text-red-400">Command not found: {cmd}. Type 'help' for available commands.</span>;
+        output = <span className="text-red-400">Command not found: {cmd}. Type &apos;help&apos; for available commands.</span>;
     }
 
     setHistory((prev) => [...prev, { cmd: input, output }]);

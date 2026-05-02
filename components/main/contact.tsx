@@ -44,15 +44,15 @@ export const Contact = () => {
     <div id="contact" className="w-full py-20 flex justify-center relative z-20">
       <div className="max-w-6xl w-full mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
-          
+
           {/* Left Side: Info */}
           <div className="w-full lg:w-5/12 flex flex-col space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 mb-4">
-                Let's Connect
+                Let&apos;s Connect
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                I&apos;m currently looking for new opportunities. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
               </p>
             </div>
 
@@ -66,7 +66,7 @@ export const Contact = () => {
                   <a href="mailto:gauravakp2001@gmail.com" className="hover:text-cyan-400 transition-colors">gauravakp2001@gmail.com</a>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-4 text-gray-300">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400">
                   <FontAwesomeIcon icon={faPhone} className="w-5 h-5" />
@@ -112,7 +112,7 @@ export const Contact = () => {
             <div className="bg-[#0f172a]/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none"></div>
-              
+
               <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
@@ -140,7 +140,7 @@ export const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="flex flex-col gap-2">
                   <label htmlFor="phone" className="text-sm font-medium text-gray-300 ml-1">Contact Number</label>
                   <input
@@ -169,41 +169,17 @@ export const Contact = () => {
 
                 <button
                   type="submit"
-                  className="mt-2 w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] hover:scale-[1.02] transition-all duration-300 relative overflow-hidden group flex items-center justify-center"
+                  className="mt-2 w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] hover:scale-[1.02] transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  {/* Glowing sweep effect on hover */}
-                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out"></div>
-                  
-                  <span className="relative z-10 flex items-center gap-2 transition-transform duration-300 group-hover:-translate-x-1">
-                    Send Message
-                    
-                    <div className="relative flex items-center justify-center w-6 h-6 overflow-visible">
-                      {/* Original airplane that flies away */}
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="absolute h-5 w-5 transform transition-all duration-500 group-hover:translate-x-6 group-hover:-translate-y-6 group-hover:scale-125 group-hover:opacity-0" 
-                        viewBox="0 0 20 20" 
-                        fill="currentColor"
-                      >
-                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-                      </svg>
-                      
-                      {/* New airplane that flies in */}
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="absolute h-5 w-5 transform transition-all duration-500 -translate-x-8 translate-y-8 scale-50 opacity-0 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100" 
-                        viewBox="0 0 20 20" 
-                        fill="currentColor"
-                      >
-                        <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-                      </svg>
-                    </div>
-                  </span>
+                  Send Message
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
                 </button>
               </form>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -211,4 +187,3 @@ export const Contact = () => {
 };
 
 export default Contact;
-
