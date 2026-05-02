@@ -3,103 +3,112 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { slideInFromTop } from "@/lib/motion";
+import { useState } from "react";
 
 export const About = () => {
+  const [imgLoaded, setImgLoaded] = useState(false);
   return (
     <div
       id="about-me"
-      className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20"
+      className="flex flex-row relative items-center justify-center h-auto w-full py-10 -z-20"
     >
       <div className="absolute w-auto h-auto top-0 z-[5]">
-        <motion.div
-          variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
-        >
-          About
-        </motion.div>
+        {imgLoaded && (
+          <motion.div
+            variants={slideInFromTop}
+            initial="hidden"
+            animate="visible"
+            className="text-[40px] font-medium text-center text-gray-200"
+          >
+            About
+          </motion.div>
+        )}
       </div>
 
-      <div className="flex flex-row w-full h-full items-center justify-center">
-        <div className="relative w-1/2 flex items-center justify-center">
-          <div className="absolute inset-0 border-4 border-transparent rounded-full blur-lg"></div>
-          <Image
-            src="/me.jpg"
-            alt="Profile Picture"
-            width={600}
-            height={850}
-            className="rounded-full relative z-30" // Use relative to keep it above the blur
-          />
-        </div>
+      <div className="flex flex-col w-full h-full items-center justify-center mt-28 mb-10 max-w-5xl mx-auto px-4 md:px-10">
 
-        <div className="w-1/2 flex flex-col items-start justify-center p-10 text-gray-200">
-          <div className="text-[30px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-4 mt-20">
-            Passionate about problem solving and programming.
+        {/* Main Content Box with Floating Avatar */}
+        <div className="relative w-full border border-white/10 bg-[#0a0520]/60 backdrop-blur-xl px-6 md:px-12 pt-28 pb-12 rounded-3xl shadow-[0_0_40px_rgba(112,66,248,0.15)] transition-all duration-500 hover:border-cyan-500/30 hover:shadow-[0_0_40px_rgba(0,255,255,0.15)] group/box mt-20">
+
+          {/* Floating Avatar */}
+          <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[160px] h-[160px] group">
+            {/* Glowing background blob */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/60 to-cyan-500/60 rounded-full blur-xl group-hover:blur-2xl transition-all duration-700 opacity-60 group-hover:opacity-100"></div>
+
+            {/* Image Container */}
+            <div className="relative w-full h-full rounded-full border-[3px] border-[#0a0520] overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.4)] z-10 transition-transform duration-700 group-hover:scale-[1.05] bg-[#030014]">
+              <Image
+                src="/me.jpg"
+                alt="Profile Picture"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover object-top"
+                priority={true}
+                onLoad={() => setImgLoaded(true)}
+              />
+            </div>
           </div>
-          <p className="text-[18px] mb-4">
-            I&apos;m a <b className="text-red-300">CSE&apos;25</b> student at{" "}
-            <b className="text-red-300">Lovely Professional University</b>.
-            I&apos;m on a journey to become a Software Development Engineer,
-            backed by a strong foundation in computer science and engineering. I
-            excel in quickly learning and applying new technologies to
-            real-world projects. I&apos;m eager to seize opportunities where I
-            can leverage my skills to make a positive impact on the world.
-            Outside of coding, I have a keen interest in Competitive Programming
-            and enjoy tackling programming puzzles in my free time. Let&apos;s
-            code and create something amazing together!
-            <span className="rocket-animation">🚀</span>
+
+          <div className="text-[28px] md:text-[38px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-6 text-center w-full tracking-wide">
+            Engineering Scalable Solutions
+          </div>
+
+          <p className="text-[16px] md:text-[18px] mb-12 leading-relaxed text-gray-300 text-center max-w-3xl mx-auto">
+            As a <strong className="text-purple-300">Software Development Engineer I (SDE1)</strong>, I specialize in building highly resilient and scalable enterprise applications. I possess a strong foundation in computer science principles and thrive in dynamic environments where rapid learning and complex problem-solving are paramount. My professional focus is dedicated to writing clean, maintainable code that drives impactful business solutions.
           </p>
-          <ul>
-            <li className="mb-4">
-              <span className="font-semibold text-purple-300">
-                Full-Stack Developer in the Making:
-              </span>{" "}
-              <span className="text-blue-200">
-                Proficient in HTML, CSS, JavaScript, and React to create dynamic
-                and visually appealing web applications.
-              </span>
-            </li>
-            <li className="mb-4">
-              <span className="font-semibold text-green-500">
-                Power Skills:
-              </span>
-              <ul className="list-disc ml-6">
-                <li className="text-yellow-300">
-                  Friendly and adaptable team member
+
+          <div className="flex flex-col md:flex-row gap-10 md:gap-16 justify-between w-full mt-8 border-t border-white/10 pt-10">
+            {/* Current Tech Stack */}
+            <div className="flex-1 flex flex-col items-start">
+              <h3 className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-500 text-xl mb-6 flex items-center">
+                <span className="text-cyan-400 mr-3 text-2xl group-hover/box:animate-pulse">✦</span> Current Tech Stack
+              </h3>
+              <ul className="list-none space-y-5 pl-2">
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-3 mt-1 text-sm">▹</span>
+                  <span className="text-gray-300 text-[15px] leading-relaxed">
+                    <strong className="text-white">Backend Engineering:</strong> Designing and maintaining robust microservices leveraging <strong className="text-purple-200">Java (Spring Boot, Dropwizard)</strong> and <strong className="text-purple-200">Python (Django)</strong>.
+                  </span>
                 </li>
-                <li className="text-yellow-300">
-                  Strong team player with excellent time management skills
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-3 mt-1 text-sm">▹</span>
+                  <span className="text-gray-300 text-[15px] leading-relaxed">
+                    <strong className="text-white">Frontend Development:</strong> Building responsive, dynamic, and state-driven user interfaces with <strong className="text-cyan-200">Angular & React</strong>.
+                  </span>
                 </li>
-                <li className="text-yellow-300">
-                  Focused and self-motivated individual
-                </li>
-                <li className="text-yellow-300">
-                  Natural problem solver, maintaining a calm demeanor under
-                  pressure
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-3 mt-1 text-sm">▹</span>
+                  <span className="text-gray-300 text-[15px] leading-relaxed">
+                    <strong className="text-white">Bilingual Expertise:</strong> Deeply comfortable navigating and bridging both Java and Python ecosystems to deliver end-to-end scalable solutions.
+                  </span>
                 </li>
               </ul>
-            </li>
-            <li>
-              <span className="font-semibold text-blue-300">
-                Extracurricular Involvement:
-              </span>
-              <ul className="list-disc ml-6">
-                <li className="text-pink-200">
-                  Executive Leader of LPU-NSS | Since Aug&apos;21
-                </li>
-                <li className="text-pink-200">
-                  Smart India Hackathon | Sep&apos;23
-                </li>
-                <li className="text-pink-200">
-                  Contributed to a nationwide hackathon, demonstrating
-                  problem-solving skills and innovative thinking.
-                </li>
-                <li className="text-pink-200">
-                  Engaged in collaborative coding projects and actively
-                  participated in coding competitions.
-                </li>
-              </ul>
-            </li>
-          </ul>
+            </div>
+
+            {/* Core Competencies */}
+            <div className="flex-1 flex flex-col items-start">
+              <h3 className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-cyan-500 text-xl mb-6 flex items-center">
+                <span className="text-purple-400 mr-3 text-2xl group-hover/box:animate-pulse">✦</span> Core Competencies
+              </h3>
+              <div className="flex flex-wrap gap-3 mt-2">
+                {[
+                  "Problem Solving",
+                  "System Design",
+                  "Algorithmic Efficiency",
+                  "Highly Adaptable",
+                  "Performance Under Pressure",
+                  "Competitive Programming"
+                ].map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="px-4 py-2 text-sm font-medium text-gray-300 bg-white/5 border border-white/10 rounded-full shadow-sm hover:border-cyan-500/50 hover:text-cyan-300 transition-colors duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
