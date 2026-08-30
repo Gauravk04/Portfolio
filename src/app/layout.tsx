@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
-import { Footer } from "@/components/main/footer";
-import { Navbar } from "@/components/main/navbar";
-import { StarsCanvas } from "@/components/main/star-background";
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
+import { StarsCanvas } from "@/components/effects/star-background";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
 

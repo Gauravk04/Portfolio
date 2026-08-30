@@ -1,5 +1,5 @@
-import { SkillDataProvider } from "@/components/sub/skill-data-provider";
-import { SkillText } from "@/components/sub/skill-text";
+import { SkillDataProvider } from "@/components/ui/skill-data-provider";
+import { SkillText } from "@/components/ui/skill-text";
 import { SKILL_ROWS } from "@/constants/data";
 
 export const Skills = () => {

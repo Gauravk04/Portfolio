@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import "./education.css"; // Ensure this file contains the necessary styles
+import "./experience.css"; // Ensure this file contains the necessary styles
 
 const Experience = () => {
   return (

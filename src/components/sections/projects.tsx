@@ -1,4 +1,4 @@
-import { ProjectCard } from "@/components/sub/project-card";
+import { ProjectCard } from "@/components/ui/project-card";
 import { PROJECTS } from "@/constants/data";
 
 export const Projects = () => {

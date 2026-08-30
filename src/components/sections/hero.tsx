@@ -1,4 +1,4 @@
-import { HeroContent } from "@/components/sub/hero-content";
+import { HeroContent } from "@/components/ui/hero-content";
 
 export const Hero = () => {
   return (

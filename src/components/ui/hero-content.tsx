@@ -19,7 +19,7 @@ const descriptions = [
 ];
 
 
-import { Terminal } from "@/components/sub/terminal";
+import { Terminal } from "@/components/ui/terminal";
 
 export const HeroContent = () => {
   const [currentDescription, setCurrentDescription] = useState(0);
